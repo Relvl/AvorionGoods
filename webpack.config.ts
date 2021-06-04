@@ -12,7 +12,7 @@ const version = "1.0.0";
 const isDev = true;
 
 const webapp = path.join(__dirname, "src");
-const artifact = path.join(__dirname, "build", "libs", "exploded", `discord-bot-${version}-SNAPSHOT.war`);
+const artifact = path.join(__dirname, "docs");
 const webBuild = path.join(artifact, "web-build");
 
 //модули внутри node_modules, которые нам нужно явно затранспайлить, т.к. они сбилдены в es6+
