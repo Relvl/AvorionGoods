@@ -19,3 +19,4 @@ npm-debug.log
 
 # Project exclude paths
 /dist/
+application.js.LICENSE.txt
