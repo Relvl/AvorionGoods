@@ -1,0 +1,21 @@
+/.idea/**
+/.ideaDataSources/**
+/.gradle/**
+/target/**
+/out/**
+/build/**
+/node_modules/**
+/unversioned/**
+
+*.iml
+*.ipr
+*.iws
+package-lock.json
+app.js
+app.js.map
+app.css
+app.css.map
+npm-debug.log
+
+# Project exclude paths
+/dist/
