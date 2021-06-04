@@ -14,7 +14,7 @@ export class LocalStorage {
     };
 
     static load = <T = any>(key: string): T => {
-        return JSON.parse(window.localStorage.getItem(key) || "") as T;
+        return JSON.parse(window.localStorage.getItem(key) || '""') as T;
     };
 
     static acceptCookie = () => LocalStorage.store(LocalStorage.acceptKey, true);
