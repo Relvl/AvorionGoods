@@ -23,18 +23,20 @@ function Application() {
 
                 <table>
                     <thead>
-                        <tr>
-                            <td>{lang("Name")}</td>
-                            <td>{lang("Consumers")}</td>
-                            <td>{lang("Produces:")}</td>
-                        </tr>
+                    <tr>
+                        <td>{lang("Name")}</td>
+                        <td>{lang("Consumers")}</td>
+                        <td>{lang("Produces:")}</td>
+                    </tr>
                     </thead>
                     <tbody>
-                        {goodsSortedAndFiltered.map((e) => (
-                            <GoodsEntity e={e} filter={filter} key={e.names.en} />
-                        ))}
+                    {goodsSortedAndFiltered.map((e) => (
+                        <GoodsEntity e={e} filter={filter} key={e.names.en} />
+                    ))}
                     </tbody>
                 </table>
+
+                <a href="https://github.com/Relvl/AvorionGoods">Github repository - feel free to add PR</a>
             </div>
         </LangManager>
     );
