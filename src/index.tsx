@@ -19,7 +19,7 @@ function Application() {
             <div className="wrapper">
                 <header className="flex-row-center">
                     <div>
-                        <Lang>Goods list</Lang>
+                        <Lang>Goods list</Lang> - (1.3.8-beta)
                     </div>
 
                     <a href="https://github.com/Relvl/AvorionGoods" target="_blank">
@@ -38,22 +38,22 @@ function Application() {
 
                 <table>
                     <thead>
-                    <tr>
-                        <td>
-                            <Lang>Name</Lang>
-                        </td>
-                        <td>
-                            <Lang>Consumers</Lang>
-                        </td>
-                        <td>
-                            <Lang>Produces:</Lang>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <Lang>Name</Lang>
+                            </td>
+                            <td>
+                                <Lang>Consumers</Lang>
+                            </td>
+                            <td>
+                                <Lang>Produces:</Lang>
+                            </td>
+                        </tr>
                     </thead>
                     <tbody>
-                    {goodsSortedAndFiltered.map((e) => (
-                        <GoodsEntity e={e} filter={filter} key={e.names.en} />
-                    ))}
+                        {goodsSortedAndFiltered.map((e) => (
+                            <GoodsEntity e={e} filter={filter} key={e.names.en} />
+                        ))}
                     </tbody>
                 </table>
             </div>
