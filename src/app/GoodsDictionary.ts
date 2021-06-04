@@ -47,12 +47,19 @@ export class StationClass extends EntityBase {
 
         const mainProduct = this.results[0] || this.garbages[0];
 
+        this.names.en = station.factory //
+            .replace("${size}", "")
+            .replace("${good}", mainProduct.names.en)
+            .replace("${prefix}", mainProduct.names.en)
+            .trim();
+
         // names locale
         Object.entries(localisationRaw).forEach((e) => {
             const [locale, obj] = e;
             this.names[locale] = (obj[station.factory] || station.factory) //
                 .replace("${size}", "")
                 .replace("${good}", mainProduct.names[locale])
+                .replace("${prefix}", mainProduct.names[locale])
                 .trim();
         });
     }

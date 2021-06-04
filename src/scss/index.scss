@@ -52,3 +52,40 @@ table {
 .filter_exclude {
     color: #989898;
 }
+
+.cookie-warning {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: aliceblue;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.locale-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: normal;
+
+    & > * {
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &.selected {
+            text-decoration: underline;
+        }
+    }
+}

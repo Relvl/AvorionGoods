@@ -32,7 +32,7 @@ export default (env: any, argv: any) => {
             filename: "[name].js",
             chunkFilename: "[name].chunk.js",
             pathinfo: false,
-            publicPath: "/web-build",
+            publicPath: "",
         },
         target: "web",
         devtool: __watch("eval-source-map", "source-map"),
