@@ -13,7 +13,7 @@ const isDev = true;
 
 const webapp = path.join(__dirname, "src");
 const artifact = path.join(__dirname, "docs");
-const webBuild = path.join(artifact, "web-build");
+const webBuild = artifact;
 
 //модули внутри node_modules, которые нам нужно явно затранспайлить, т.к. они сбилдены в es6+
 const transpileNodeModules = ["cyrillic-to-translit-js", "query-string", "strict-uri-encode", "split-on-first", "rifm"];
@@ -25,13 +25,7 @@ export default (env: any, argv: any) => {
     return {
         mode: isDev ? "development" : "production",
         entry: {
-            application: [
-                path.join(webapp, "./index.tsx"),
-                glob.sync("./src/scss/components/**/*.scss"),
-                path.join(webapp, "./scss/index.scss"),
-            ]
-                .flat()
-                .filter((e) => !!e),
+            application: [path.join(webapp, "./index.tsx"), glob.sync("./src/scss/components/**/*.scss"), path.join(webapp, "./scss/index.scss")].flat().filter((e) => !!e),
         },
         output: {
             path: webBuild,
